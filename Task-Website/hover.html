@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Simple Social Media Icons with Tooltip
+    </title>
+    <style>
+      body { display: flex; justify-content: center; align-items: center; height:
+      100vh; background-color: #f0f0f0; margin: 0; } .social-icons { display:
+      flex; gap: 20px; } .social-icons a { position: relative; display: inline-block;
+      width: 40px; height: 40px; background-color: #555; border-radius: 50%;
+      text-align: center; line-height: 40px; color: white; font-size: 20px; text-decoration:
+      none; } .social-icons a:hover { background-color: #333; } .social-icons
+      a::before { content: attr(data-tooltip); position: absolute; bottom: 100%;
+      left: 50%; transform: translateX(-50%); background-color: #333; color:
+      white; padding: 5px 10px; border-radius: 5px; white-space: nowrap; opacity:
+      0; visibility: hidden; transition: opacity 0.3s; } .social-icons a:hover::before
+      { opacity: 1; visibility: visible; }
+    </style>
+  </head>
+  
+  <body>
+    <div class="social-icons">
+      <a href="https://facebook.com" data-tooltip="Facebook">
+        F
+      </a>
+      <a href="https://twitter.com" data-tooltip="Twitter">
+        T
+      </a>
+      <a href="https://instagram.com" data-tooltip="Instagram">
+        I
+      </a>
+      <a href="https://linkedin.com" data-tooltip="LinkedIn">
+        L
+      </a>
+    </div>
+  </body>
+
+</html>
